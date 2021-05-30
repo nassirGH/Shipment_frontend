@@ -1,0 +1,38 @@
+.home{
+  height: 550px;
+  background-image: url('./images/image.jpg');
+  margin-top: -20px;
+}
+
+h1{
+  margin-left: 550px;
+}
+
+.shipmentpage{
+  background-image: none;
+}
+
+.register{
+  background-image: url('./images/image.jpg');
+  height: 550px;
+  margin-top: -20px;
+}
+
+.EditBtn{
+  margin-left: 620px;
+  width: 150px;
+  height: 40px;
+  border-radius: 30px;
+  background-color: blueviolet;
+  color: white;
+  font-weight: bold;
+}
+
+.DeleteBtn{
+  margin-left: 645px;
+  width: 150px;
+  height: 40px;
+  border-radius: 30px;
+  background-color: red;
+  font-weight: bold;
+}
