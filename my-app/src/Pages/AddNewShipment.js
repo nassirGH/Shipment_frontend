@@ -70,7 +70,7 @@ function ADD_Shipment() {
           }}
         >
           <input placeholder="name" style={{ height:"20px", width:"250px",marginTop:"30px"}} type="text"  onChange={event => setName(event.target.value)} /><br/><br/>
-          <input placeholder="user_id" style={{ height:"20px", width:"250px"}} type="text"   onChange={event => setUser_id(event.target.value)}/><br/><br/>
+          <input placeholder="user Id" style={{ height:"20px", width:"250px"}} type="text"   onChange={event => setUser_id(event.target.value)}/><br/><br/>
           <input placeholder="waybill" type="text" style={{ height:"20px", width:"250px"}}  onChange={event => setWaybill(event.target.value)} /> <br/><br/>
           <input placeholder="phoneNumber" style={{ height:"20px", width:"250px"}} type="text"  onChange={event => setPhoneNumber(event.target.value)} /><br/><br/>
           <input placeholder="address" style={{ height:"20px", width:"250px"}} type="text"   onChange={event => setAddress(event.target.value)}/><br/><br/>

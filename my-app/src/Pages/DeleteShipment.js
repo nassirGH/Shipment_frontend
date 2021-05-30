@@ -42,7 +42,7 @@ function DELETE_Shipment() {
             e.preventDefault();
             deleteShipment({
               variables: {
-                id:6,
+                id:1,
               },
             }).then(function (response) {
               console.log(response)

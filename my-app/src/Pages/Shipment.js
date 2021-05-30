@@ -33,20 +33,21 @@ const  SHIPMENT_QUERY = gql`
 `;
 
 function ShipmentPAGE() {
+  const [Id,setId] = "";
   const { loading, error, data } = useQuery(SHIPMENT_QUERY);
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error has occured !</p>;
   return data.shipments.map(({ name, waybill,address,phoneNumber,user,id }) => (
     <div key={name} style={{backgroundColor:"lightblue"}}>
       <p style={{marginLeft:"22px",marginTop:"10px"}}>
-      name :  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{name} <button style={{marginTop:"20px"}} className="EditBtn" onClick={()=>window.location="/editShipment"}  >Edit Shipment</button><br/><br/>
-      waybill: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{waybill}<button className="DeleteBtn" onClick={()=>window.location="/deleteShipment"} >Delete Shipment</button><br/><br/>
+      name :  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{name} <button style={{marginTop:"20px"}} className="EditBtn" onClick={()=>window.location="/editShipment"}  >Edit Shipment</button><br/><br/>
+      waybill: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{waybill}<button className="DeleteBtn" onClick={()=>window.location="/deleteShipment"} >Delete Shipment</button><br/><br/>
       address : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{address}<br/><br/>
       Phone number:&nbsp;&nbsp;&nbsp;&nbsp; {phoneNumber}<br/><br/>
       User name: &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{user.name} <br/><br/>
       User Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{user.email}<br/>
       ----------------------------------------
-
+      
       </p>
     </div>
   ));

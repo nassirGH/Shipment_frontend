@@ -56,7 +56,7 @@ function UPDATE_Shipment() {
             e.preventDefault();
             updateShipment({
               variables: {
-                id:8,
+                id:2,
                 name: name,
                 user_id: user_id,
                 waybill: waybill,
